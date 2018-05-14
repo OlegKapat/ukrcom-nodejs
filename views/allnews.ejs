@@ -1,0 +1,10 @@
+<% include layout/header.ejs %>
+    
+        <% news.forEach(function(post){ %>       
+            <h3>
+              <%= post.title %>
+            </h3>           
+            <p><%= post.body %></p>          
+        <% }); %>
+      
+        <% include layout/footer.ejs %>
