@@ -6,13 +6,15 @@ var jquery = require('jQuery');
 const conf=require('./config');
 var bodyParser=require('body-parser');
 const News=require('./views/models/news');
+var staticAsset = require('static-asset');
 const path=require('path');
 app.set('view engine','ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 //app.use(stylus.middleware({src: __dirname + '/public', compile: compile}))
 //app.use('/public',express.static('public'));
+app.use(staticAsset(path.join(__dirname,'public')));
 app.use(express.static(path.join(__dirname,'public')));
-app.use('/javascripts',express.static(path.join(__dirname, 'node_modules','jQuery','dist')));
+app.use('/javascripts',express.static(path.join(__dirname, 'node_modules','jquery','dist')));
 app.get('/', (req, res) =>{
   res.render('index')
 });
