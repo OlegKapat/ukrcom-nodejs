@@ -2,12 +2,14 @@ var express = require('express');
 var app = express();
 
 var jquery = require('jQuery');
+var config=require('./config');
 
 const conf=require('./config');
 var bodyParser=require('body-parser');
 const News=require('./views/models/news');
 var staticAsset = require('static-asset');
 const path=require('path');
+// sets and users
 app.set('view engine','ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 //app.use(stylus.middleware({src: __dirname + '/public', compile: compile}))
@@ -18,6 +20,7 @@ app.use('/javascripts',express.static(path.join(__dirname, 'node_modules','jquer
 app.get('/', (req, res) =>{
   res.render('index')
 });
+//routers
 app.get('/news', (req, res) => res.render('news'));
 app.post('/news',(reg,res)=>{
   const {title,body}=reg.body;
@@ -31,4 +34,21 @@ app.get('/allnews',(reg,res)=>{
   News.find({}).then(news=>res.render('allnews',{news:news})).catch(err=>{res.status(200).json({err:err})});
 })
 module.exports=app;
+
+// catch 404 and forward to error handler
+app.use((reg,res,next)=>{
+  const err=new Error("Сторінка не знайдена");
+  err.status=404;
+  next(err);
+})
+// error handler
+// eslint-disable-next-line no-unused-vars
+app.use((error,reg,res,next)=>{
+  res.status(error.status || 500);
+  res.render('error',{
+    message:error.message,
+    error:!config.IS_PRODUCTION ? error:{},
+    title:"Щось пішло не так"
+  });
+});
 
