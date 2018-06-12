@@ -6,7 +6,8 @@ var config=require('./config');
 
 const conf=require('./config');
 var bodyParser=require('body-parser');
-const News=require('./views/models/news');
+const News=require('./models/news');
+const User=require('./models/user');
 var staticAsset = require('static-asset');
 const path=require('path');
 // sets and users
@@ -22,6 +23,7 @@ app.get('/', (req, res) =>{
 });
 //routers
 app.get('/news', (req, res) => res.render('news'));
+app.get('/auth',(req,res)=>res.render('auth'));
 app.post('/news',(reg,res)=>{
   const {title,body}=reg.body;
   News.create({
@@ -35,6 +37,17 @@ app.get('/allnews',(reg,res)=>{
 })
 module.exports=app;
 
+app.get('/auth',(reg,res)=>{
+    name:reg.body.name;
+    password:reg.body.password;
+    if(name=='Oleg' || password=='asdasd'){
+      res.redirect('./news');
+    }
+    else{
+      console.log("Невірний пароль");
+    }
+})
+module.exports=app;
 // catch 404 and forward to error handler
 app.use((reg,res,next)=>{
   const err=new Error("Сторінка не знайдена");

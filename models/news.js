@@ -18,4 +18,4 @@ const schema=new Schema({
 schema.set('toJSON',{
     virtual:true
 })
-module.exports=mongoose.model('news',schema);
+module.exports=mongoose.model('News',schema);
