@@ -1,10 +1,10 @@
 {
-    "ignore": ["node_modules", "dist", "public"],
+    "ignore": ["node_modules", "dev"],
     "env": {
       "NODE_ENV": "development",
       "PORT": 3000,
       "MONGO_URL": "mongodb://localhost/testdata"
     },
-    "ext": ".js,.json",
+    "ext": "js css json",
     "watch": "./"
   }

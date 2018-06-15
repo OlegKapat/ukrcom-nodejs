@@ -1,0 +1,10 @@
+h1{
+    text-align: center;
+    text-decoration: underline;
+    color:rgb(143, 71, 236);
+}
+.about{
+    width: auto;
+    height: 100%;
+    margin-left: 40px;
+}

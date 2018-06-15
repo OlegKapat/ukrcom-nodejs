@@ -4,6 +4,7 @@ var app = express();
 var jquery = require('jQuery');
 var config=require('./config');
 
+
 const conf=require('./config');
 var bodyParser=require('body-parser');
 const News=require('./models/news');
@@ -23,6 +24,7 @@ app.get('/', (req, res) =>{
 });
 //routers
 app.get('/news', (req, res) => res.render('news'));
+app.get('/main',(reg,res)=>red.render('main'))
 app.get('/auth',(req,res)=>res.render('auth'));
 app.post('/news',(reg,res)=>{
   const {title,body}=reg.body;
@@ -35,18 +37,7 @@ app.post('/news',(reg,res)=>{
 app.get('/allnews',(reg,res)=>{
   News.find({}).then(news=>res.render('allnews',{news:news})).catch(err=>{res.status(200).json({err:err})});
 })
-module.exports=app;
 
-app.get('/auth',(reg,res)=>{
-    name:reg.body.name;
-    password:reg.body.password;
-    if(name=='Oleg' || password=='asdasd'){
-      res.redirect('./news');
-    }
-    else{
-      console.log("Невірний пароль");
-    }
-})
 module.exports=app;
 // catch 404 and forward to error handler
 app.use((reg,res,next)=>{
