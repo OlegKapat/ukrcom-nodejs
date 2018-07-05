@@ -15,17 +15,19 @@ const path=require('path');
 app.set('view engine','ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 //app.use(stylus.middleware({src: __dirname + '/public', compile: compile}))
-//app.use('/public',express.static('public'));
+app.use('/public',express.static('public'));
 app.use(staticAsset(path.join(__dirname,'public')));
 app.use(express.static(path.join(__dirname,'public')));
 app.use('/javascripts',express.static(path.join(__dirname, 'node_modules','jquery','dist')));
+app.use('/mdbootstrap', express.static(__dirname + '/node_modules/mdbootstrap'));
 app.get('/', (req, res) =>{
   res.render('index')
 });
 //routers
 app.get('/news', (req, res) => res.render('news'));
-app.get('/main',(reg,res)=>red.render('main'))
+app.get('/main',(reg,res)=>res.render('main'))
 app.get('/auth',(req,res)=>res.render('auth'));
+app.get('/index',(reg,res)=>res.render('index'))
 app.post('/news',(reg,res)=>{
   const {title,body}=reg.body;
   News.create({

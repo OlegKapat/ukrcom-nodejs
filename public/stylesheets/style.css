@@ -5,7 +5,7 @@ body {
     font-weight: 400;
     letter-spacing: 1px;
     overflow: hidden;
-    background-color: aqua;
+    
   }
   
   h1 {
@@ -16,14 +16,14 @@ body {
     font-size: 2.75em;
   }
   
-  #container {
+  #article {
     position: relative;
-    left: 0;
+    left: -15px;
     transition: left 300ms ease;
-    display: inline-block;
-    width: 100%;
+    display: inline;
+    
   }
-  #container #content {
+  #arcitle #content {
     position: relative;
     width: 100%;
     background: #f8f8f8;
@@ -31,18 +31,18 @@ body {
     float: left;
     overflow: hidden;
   }
-  #container #content .left-burger {
+  #article #content .left-burger {
     position: relative;
     width: 50%;
     float: left;
     background: transparent;
     z-index: 100;
   }
-  #container #content .left-burger h2 {
+  #article #content .left-burger h2 {
     position: relative;
     z-index: auto;
   }
-  #container #content .left-burger .triangle {
+  #article #content .left-burger .triangle {
     width: 0;
     height: 0;
     border-top: solid #f1f1f1;
@@ -51,13 +51,13 @@ body {
     border-bottom: none;
     position: absolute;
   }
-  #container #content .right-slider {
+  #article #content .right-slider {
     position: relative;
     width: 50%;
     float: left;
     background: transparent;
   }
-  #container #content .right-slider h2 {
+  #article #content .right-slider h2 {
     position: absolute;
     bottom: 30px;
     right: 30px;
@@ -69,7 +69,7 @@ body {
     position: fixed;
     z-index: 100;
     display: inline-block;
-    border-bottom: 3px solid #5119ee
+    border-bottom: 3px solid rgb(95, 70, 235);
   }
   #main-nav .logo {
     padding: 20px 50px;
@@ -312,6 +312,19 @@ body {
   li{
     list-style-type: none;
   }
+  #logotype{
+    width: 300px;
+    height: auto;
+    float: left;
+    margin-right: 20px;
+  }
+  .phone{
+    width: 600px;
+    height: auto;
+  }
+  .phone h2{
+    color: black;
+  }
   #main-nav #logotype{
     padding: 15px;
     
@@ -326,7 +339,7 @@ body {
 }
 
 footer{
-     background-color: #33383c;
+     background-color: #404040;
      padding:70px 0px;
 }	       
 
@@ -345,6 +358,7 @@ footer{
    text-transform: uppercase;
    font-size: 13px;
    letter-spacing: 3px;
+   margin-top: 20px;
 }
  
 .footer-list  li a , .footer-list  li p{

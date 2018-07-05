@@ -1,10 +1,90 @@
+
+
 h1{
-    text-align: center;
-    text-decoration: underline;
-    color:rgb(143, 71, 236);
+  text-align: center;
+  font-family: 'Old Standard TT', serif;
+  font-size: 46px;
+  color: rgb(54, 33, 177);
 }
-.about{
-    width: auto;
-    height: 100%;
-    margin-left: 40px;
+h5{
+  text-align: center;
+  font-size: 46px;
+  font-family: 'Old Standard TT', serif;
+  color:black;
+  padding: 10px;
 }
+.hero {
+  height: 900px;
+  position: relative;
+  background: url('/public/images/connect.jpg');
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+figure  {
+  height: 200px;
+  width: 200px;
+  margin: 20% 10% 10% 2%;
+  position: relative;
+  float: left;
+  
+}
+figcaption{
+  font-size: 26px;
+  color: rgb(54, 33, 177);
+  font-family: 'Playfair Display', serif;
+  margin-left: 5%;
+  border-bottom: 5px solid transparent;
+  -moz-border-image: -moz-linear-gradient(to right, #e0e0e4 0%,  #898b8b 50%, #e0e0e4 100%);
+  -webkit-border-image: -webkit-linear-gradient(to right,#e0e0e4 0%,  #898b8b 50%, #e0e0e4 100%);
+  border-image: linear-gradient(to right, #e0e0e4 0%,  #898b8b 50%, #e0e0e4 100%);
+  border-image-slice: 20%;
+  border-right: 5px solid transparent;
+  -moz-border-image: -moz-linear-gradient(to bottom, #e0e0e4 0%,  #898b8b 50%, #e0e0e4 100%);
+  -webkit-border-image: -webkit-linear-gradient(to bottom,#e0e0e4 0%,  #898b8b 50%, #e0e0e4 100%);
+  border-image: linear-gradient(to bottom, #e0e0e4 0%,  #898b8b 50%, #e0e0e4 100%);
+  border-image-slice: 20%;
+}
+.main-el {
+  height: 10px;
+  width: 100%;
+  position: absolute;
+  top: 30%;
+  margin-top: -50px;
+}
+.fore-el {
+  /* background-image: url('/public/images/ethernet.png'); */
+  height: 300px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 380px;
+
+}
+
+.back-el {
+  width: 960px;
+  height: 200px;
+  background-image: url();
+  background-repeat: no-repeat;
+  background-position: top left;
+  position: absolute;
+  left: 50%;;
+  margin-left: -480px;
+  margin-top: -20px;
+}
+hr {
+  height: 8px;
+  background-color: rgb(102, 97, 97);
+  background-image: linear-gradient(90deg,  rgb(102, 97, 97), transparent);
+  border: 3px;
+  height: 1px;
+}
+
+
+
+  
