@@ -172,7 +172,7 @@ body {
     list-style: none;
     width: 100%;
     color: #fff;
-    font-size: 1.25rem;
+     font-size: 1.25rem;
     font-weight: 300;
     background: rgba(255, 255, 255, 0.05);
     border-top: 1px solid #5a5a5a;
@@ -197,7 +197,7 @@ body {
   }
   #sidebar #mobile-nav ul .nav-item h3 {
     position: relative;
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 400;
     color: #fff;
     padding: 15px 25px;
@@ -246,7 +246,7 @@ body {
   }
   #sidebar #mobile-nav ul .sub-nav .sub-nav-item h4 {
     position: relative;
-    font-size: 1rem;
+    font-size: 1,5rem;
     font-weight: 300;
     color: #f1f1f1;
     padding: 11px 20px 10px 40px;

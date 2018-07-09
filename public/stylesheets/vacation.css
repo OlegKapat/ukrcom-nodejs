@@ -1,0 +1,26 @@
+.maintext, .addtext,p  {
+    margin:2% auto 20px 100px;
+    text-align: center;
+    color: white;
+    
+}
+
+.list ul{
+    margin-left: 20%;
+    
+}
+.list li {
+    color: white;
+}
+.fon{
+    background-image: url('/public/images/fon.png');
+    background-repeat: repeat;
+   
+}
+#vac{
+    background: #463af0;
+    margin-top: 20px;
+}
+a {
+    color: black;
+}

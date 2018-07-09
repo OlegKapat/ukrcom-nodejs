@@ -27,7 +27,10 @@ app.get('/', (req, res) =>{
 app.get('/news', (req, res) => res.render('news'));
 app.get('/main',(reg,res)=>res.render('main'))
 app.get('/auth',(req,res)=>res.render('auth'));
-app.get('/index',(reg,res)=>res.render('index'))
+app.get('/index',(reg,res)=>res.render('index'));
+app.get('/licency',(reg,res)=>res.render('licency'));
+app.get('/vacation',(reg,res)=>res.render('vacation'));
+app.get('/quality',(reg,res)=>res.render('quality'));
 app.post('/news',(reg,res)=>{
   const {title,body}=reg.body;
   News.create({
