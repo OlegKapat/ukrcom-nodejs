@@ -5,7 +5,7 @@ var jquery = require('jQuery');
 var config=require('./config');
 
 
-const conf=require('./config');
+
 var bodyParser=require('body-parser');
 const News=require('./models/news');
 const User=require('./models/user');
@@ -14,10 +14,12 @@ const path=require('path');
 // sets and users
 app.set('view engine','ejs');
 app.use(bodyParser.urlencoded({extended:true}));
+// app.use('/', routes.archive);
 //app.use(stylus.middleware({src: __dirname + '/public', compile: compile}))
 app.use('/public',express.static('public'));
 app.use(staticAsset(path.join(__dirname,'public')));
 app.use(express.static(path.join(__dirname,'public')));
+
 app.use('/javascripts',express.static(path.join(__dirname, 'node_modules','jquery','dist')));
 app.use('/mdbootstrap', express.static(__dirname + '/node_modules/mdbootstrap'));
 app.get('/', (req, res) =>{
@@ -31,6 +33,11 @@ app.get('/index',(reg,res)=>res.render('index'));
 app.get('/licency',(reg,res)=>res.render('licency'));
 app.get('/vacation',(reg,res)=>res.render('vacation'));
 app.get('/quality',(reg,res)=>res.render('quality'));
+app.get('/pdprice',(reg,res)=>res.render('pdprice'));
+app.get('/pdabout',(reg,res)=>res.render('pdabout'));
+app.get('/pdorder',(reg,res)=>res.render('pdorder'));
+app.get('/telprice',(reg,res)=>res.render('telprice'));
+app.get('/telcontract',(reg,res)=>res.render('telcontract'));
 app.post('/news',(reg,res)=>{
   const {title,body}=reg.body;
   News.create({

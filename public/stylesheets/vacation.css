@@ -13,13 +13,20 @@
     color: white;
 }
 .fon{
+    background: #463af0;
+    background-repeat: repeat;
+    border: 4px solid transparent;
+    border-radius: 16px;
+    background: linear-gradient(rgb(228, 227, 225), rgb(111, 128, 223));
+    background-clip: padding-box;
+    padding: 10px;
+    box-shadow: 0 3px 9px black, inset 0 0 9px white;
+    margin-top: 20px;
+}
+.vac{
+    margin-top: 20px;
     background-image: url('/public/images/fon.png');
     background-repeat: repeat;
-   
-}
-#vac{
-    background: #463af0;
-    margin-top: 20px;
 }
 a {
     color: black;

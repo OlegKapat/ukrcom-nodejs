@@ -1,0 +1,40 @@
+<% include layout/header.ejs %>
+ <link rel="stylesheet"  type='text/css' href="<%= assetFingerprint('/stylesheets/pdorder.css') %>"/> 
+   
+<section class="vac">
+<div class="container" id="wrap">
+        <div class="row fon">
+          <div class="col-md-6 col-md-offset-3 col-md-6">
+              <form action="/pdorder" method="post" accept-charset="utf-8" class="form" role="form">   
+                      <h4>Замовити послугу</h4>
+                      <div class="row">
+                          <div class="col-xs-6 col-md-6">
+                              <input type="text" name="firstname" value="" class="form-control input-lg" placeholder="Ім'я"  />                       
+                             </div>
+                          <div class="col-xs-6 col-md-6">
+                              <input type="text" name="lastname" value="" class="form-control input-lg" placeholder="Прізвище"  />                      
+                              </div>
+                      </div>
+                      <input type="text" name="email" value="" class="form-control input-lg" placeholder="Ваш Email"  />
+                      <input type="text" name="phone" value="Номер телефону" class="form-control input-lg" placeholder="Phone number"  />
+                      <input type="Номер телефону" name="company" value="" class="form-control input-lg" placeholder="Компанія"/>
+                      <label for="question">Питання з підключення</label>                    
+                      <select name="month" id="question"class = "form-control input-lg">
+                        <option value="fin">Фінансове питання</option>
+                        <option value="pd">Передача даних</option>
+                        <option value="tel">Телефонія</option>
+                        <option value="other">Інші питання</option>
+                      </select>
+                                       
+                      
+                       
+               
+                      <button class="btn btn-lg btn-primary btn-block signup-btn" type="submit">
+                          Відправити замовлення</button>
+              </form>          
+            </div>
+  </div>            
+  </div>
+  </div>
+</section>
+<% include layout/footer.ejs %>
