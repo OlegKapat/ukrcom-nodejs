@@ -13,20 +13,7 @@ h5{
   color:black;
   padding: 10px;
 }
-.hero {
-  height: 900px;
-  position: relative;
-  background: url('/public/images/connect.jpg');
-  background-size: cover;
-  background-position: top center;
-  background-attachment: fixed;
-  overflow: auto;
-  background-blend-mode:multiply;
-  margin-top: -20px;
-} 
-.breadcrumb{
-  margin-top: -30px;
-}
+
 figure  {
   height: 200px;
   width: 200px;

@@ -1,10 +1,29 @@
 <% include layout/header.ejs %>
+
     <form method="post">
-        <input type="text" name="title">
+        <div class="form-group form-group-sm">
+        <label for="title" class="control-label">Заголовок статьї</label>
+        <input class="form-control" id="title" type="text" name="title">
+        </div>
         <br>
-        <textarea cols="30" rows="7" name="body"></textarea>
         <br>
-        <button type="submit">Submit</button>
+        <div class="form-group form-group-sm">
+        <label for="article">Вставити статью</label>
+        <textarea class="form-control"  id="article" cols="30" rows="7" name="body"></textarea>
+        </div>
+        <br>
+        <button type="submit">Додати</button>
         
       </form>
+      <style>
+          form {
+              margin: 100px;
+          }
+          input{
+             border:1px solid black;
+             margin-left: -15px;
+          }
+             
+          
+    </style>
       <% include layout/footer.ejs %>

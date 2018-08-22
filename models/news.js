@@ -9,10 +9,12 @@ const schema=new Schema({
     body:{
         type:String,
         required:true
-    }
+    },
 },
    {
-        timestamps:true
+        type:Date,
+        timestamps:true,
+        
    }
 );
 schema.set('toJSON',{

@@ -1,10 +1,42 @@
 <% include layout/header.ejs %>
+<style>
+  p {
+    color: black;
+    text-align: left;
+  }
+  h3{
+    color: rgb(61, 64, 66);
+   
+    font-size: 20px;
+    font-weight: 700;
+    margin-left:10%;
+  }
+  .date{
+    text-align: left;
+    font-size: 12px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+</style>
+        
+          <section class="vac">
+            <div class="container">
+              <div class="row fon">
+                <div class="col-12">
+                    <% news.forEach(function(post){ %>    
+                      <h3 style="text-align: center">
+                        <%= post.title %>
+                      </h3>           
+                      <p><%= post.body %></p>   
+                      <p class="date"><%= (post.createdAt).toLocaleString() %></p> 
+                     
+                  <% }); %>
+                </div>
 
-        <% news.forEach(function(post){ %>       
-            <h3>
-              <%= post.title %>
-            </h3>           
-            <p><%= post.body %></p>          
-        <% }); %>
+              </div>
+
+            </div>
+
+          </section>   
+       
       
-        <% include layout/footer.ejs %>
+  <% include layout/footer.ejs %>

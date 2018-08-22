@@ -1,0 +1,71 @@
+<% include layout/header.ejs %>
+<style>
+   .total, .sales, .device, .lks, .abon p{
+    margin:2% auto 20px 3%;
+    text-align: center;
+    color: white;
+   }
+  
+</style>
+<link rel="stylesheet"  type='text/css' href="<%= assetFingerprint('/stylesheets/contacty.css') %>"/> 
+<section class="vac">
+    <div class="container">
+        <div class="row fon">
+            <div class="col-12">
+                <h5 style="font-size:40px">Контакти</h5>
+                <div class="total">   
+                    <h4>ТОВ "УКРКОМ"</h4>
+                    <p>04119, Україна, м.Київ,</p>
+                    <p>вул. С. Хохлових 15, 3 поверх</p>
+                    <p>тел. +38 (044) 205-55-55 (багатоканальний)</p>
+                    <p>факс. +38 (044) 205-55-25</p>
+                </div>
+                <div class="sales">   
+                    <h5>Відділ продажу послуг:</h5>
+                    <div class="names">
+                    <div class="irina">
+                        <p>(044)205-55-42 Ірина</p>
+                        <a href="mailto:irina@ukr-com.net">irina@ukr-com.net</a>
+                    </div>
+                    <div class="vitaly">
+                        <p>(044)205-55-43 Віталій</p>
+                        <a href="mailto:sip@ukr-com.net">sip@ukr-com.net</a>
+                    </div>
+                    <div class="alex">
+                        <p>(044)205-55-47 Олексій</p>
+                        <a href="a.semenov@ukr-com.net">a.semenov@ukr-com.net</a>
+                    </div>
+                </div>
+                </div>
+                <br>
+                <hr>
+                <div class="device">
+                    <h5>Відділ продажу обладнання зв`язку:</h5>
+                    <p>(044)205-55-90</p>
+                </div>
+                <hr>
+                <div class="lks">
+                    <h5>Відділ продажу обладнання для ЛКС:</h5>
+                    <p>(044)205-55-53</p>
+                </div>
+                <hr>
+                <div class="abon">
+                    <h5>Відділ по роботі з абонентами:</h5>
+                    <p>(044)205-55-88</p>
+                </div>
+                <hr>
+        </div>
+        <header>
+                <h5><span>Наше місце знаходження</span></h5>
+            </header>
+            <div class="content_map">
+                <div class="google-map-api">
+                    <div id="map-canvas" style="width:100%;height:400px;"class="gmap"></div>
+                </div>
+            </div>
+    </div>
+   </div> 
+   
+</section>
+<script type="text/javascript" src="/javascripts/googlemap.js"></script> 
+<% include layout/footer.ejs %>

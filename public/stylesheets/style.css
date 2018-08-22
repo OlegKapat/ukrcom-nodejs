@@ -30,6 +30,7 @@ body {
     z-index: 1;
     float: left;
     overflow: hidden;
+   
   }
   #article #content .left-burger {
     position: relative;
@@ -318,13 +319,7 @@ body {
     float: left;
     margin-right: 20px;
   }
-  .phone{
-    width: 600px;
-    height: auto;
-  }
-  .phone h2{
-    color: black;
-  }
+  
   #main-nav #logotype{
     padding: 15px;
     
@@ -341,6 +336,7 @@ body {
 footer{
      background-color: #404040;
      padding:70px 0px;
+     
 }	       
 
 .logo{
@@ -348,7 +344,6 @@ footer{
     font-weight:800;
     font-size:30px;
 }
-
 .footer-list span , .social span{
    color: #FFF; 
    font-weight: 800; 
@@ -359,6 +354,7 @@ footer{
    font-size: 13px;
    letter-spacing: 3px;
    margin-top: 20px;
+  
 }
  
 .footer-list  li a , .footer-list  li p{
@@ -366,6 +362,7 @@ footer{
     letter-spacing: 2px;
     text-decoration:none;
     font-size:12px;
+    text-align: left !important;
 }
 
 .footer-list , .social{
